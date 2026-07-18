@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="ticket.html">My Bookings</a>
+    <a href="admin.html">Admin</a>
+
+    <button onclick="window.location.href='seats.html'">
+    Choose Seats
+</button>
+
+<button onclick="window.location.href='payment.html'">
+    Proceed to Payment
+</button>
+</nav>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Seats</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>MoviePlex</h2>
+</header>
+
+<div class="seat-container">
+
+    <h1>Select Your Seats</h1>
+
+    <p class="screen">SCREEN THIS WAY</p>
+    <div class="screen-line"></div>
+
+    <div id="seatArea"></div>
+
+    <div class="legend">
+
+        <span><div class="silver"></div> Silver ₹150</span>
+
+        <span><div class="gold"></div> Gold ₹220</span>
+
+        <span><div class="platinum"></div> Platinum ₹320</span>
+
+        <span><div class="vip"></div> VIP ₹500</span>
+
+        <span><div class="selected"></div> Selected</span>
+
+        <span><div class="booked"></div> Booked</span>
+
+    </div>
+
+    <h2>Total : ₹<span id="total">0</span></h2>
+
+    <button onclick="location.href='payment.html'">
+        Continue
+    </button>
+
+</div>
+
+<script src="js/seats.js"></script>
+function goPayment(){
+
+    if(selected.length==0){
+
+        alert("Select at least one seat");
+
+        return;
+
+    }
+
+    window.location.href="payment.html";
+
+}
+<button onclick="goPayment()">
+Continue
+</button>
+
+</body>
+</html>
